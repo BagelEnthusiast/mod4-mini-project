@@ -118,7 +118,7 @@ const allVideos = [
   },
   {
     id: '6',
-    videoLink: 'https://youtu.be/dQw4w9WgXcQ',
+    videoLink: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: 'Rick Astley - Never Gonna Give You Up (Video)',
     author: 4,
     dateTime: "Oct 22, 1988",

@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 // import VideoFrame from './VideoFrame'
 class Video extends Component{
   render(){
-  
-    return (<iframe width="560" height="315" src={this.props.video.videoLink} frameborder="0"  allowfullscreen  />
-
+  console.log(this.props.video.onClickVideo)
+    return (
+        <div>
+    <iframe onMouseOver={()=>{ this.props.video.onClickVideo(this.props.video.id)}} width="560" height="315" src={this.props.video.videoLink} frameborder="0"  allowfullscreen  />
+    </div>
           
             // <VideoFrame video={this.props}/>
             )
@@ -13,3 +15,4 @@ class Video extends Component{
 export default Video
 
 // onClick={e=>{this.props.onClickVideo(this.props.id)}}
+//this.props.video.id

@@ -8,7 +8,8 @@ class App extends Component{
   constructor(){
     super()
     this.state={
-      videos: []
+      videos: [],
+      video: {}
     }
     this.fetchVids()
   }
@@ -26,15 +27,17 @@ class App extends Component{
     })
   }
 
-  // onClickVideo = (id) =>{
-  //   this.setState({
-  //     video: this.state.videos.find(vid =>{
-  //       if (vid.id === id){
-  //         return vid
-  //       }
-  //     })
-  //   })
-  // }
+  onClickVideo = (id) =>{
+ 
+    this.setState({
+      video: this.state.videos.find(vid =>{
+        if (vid.id === id){
+          
+          return vid
+        }
+      })
+    })
+  }
 
     render(){
     
@@ -45,7 +48,7 @@ class App extends Component{
               <Header />
           </div>
           <div className="nextVideo">
-            {this.state.videos.map(vid => <NextUp {...vid} />)}
+            {this.state.videos.map(vid => <NextUp {...vid} onClickVideo={this.onClickVideo}/>)}
           </div>
           <div className="videoFrame">
             <VideoFrame {...this.state.video}/>

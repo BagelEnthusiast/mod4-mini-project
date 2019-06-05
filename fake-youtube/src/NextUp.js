@@ -8,7 +8,7 @@ class NextUp extends Component{
   
       return (
       <div>
-          <Video video={this.props} onClickVideo={this.props.onClickVideo}/>
+          <Video video={this.props}/>
       </div>
       )}
 
