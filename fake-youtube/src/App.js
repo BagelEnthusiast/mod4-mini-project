@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Header from './Header';
+import NextUp from './NextUp';
+import VideoFrame from './VideoFrame'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+  constructor(){
+    super()
+    this.state={
+      videos: []
+    }
+    this.fetchVids()
+  }
+
+
+  fetchVids = () => {
+    fetch('/api/videos')
+    .then(res=>res.json())
+    .then(data=>{
+      
+      this.setState({
+        videos:data
+        // video:[]
+      })
+    })
+  }
+
+  // onClickVideo = (id) =>{
+  //   this.setState({
+  //     video: this.state.videos.find(vid =>{
+  //       if (vid.id === id){
+  //         return vid
+  //       }
+  //     })
+  //   })
+  // }
+
+    render(){
+    
+
+      return (
+        <div className="wrapper">
+          <div className="menuBar">
+              <Header />
+          </div>
+          <div className="nextVideo">
+            {this.state.videos.map(vid => <NextUp {...vid} />)}
+          </div>
+          <div className="videoFrame">
+            <VideoFrame {...this.state.video}/>
+          </div>
+        </div>
+      )
+    }
 }
 
 export default App;
+// {this.state.videos.length === 0 ? console.log("still empty") : this.state.videos.map(video=> <NextUp video={video}/>)}
+// onClickVideo={this.onClickVideo(vid.id)}

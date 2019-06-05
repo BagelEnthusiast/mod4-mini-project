@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import { getAll, getByType } from './data/pets';
+import { getAll} from './data/videos';
 import 'whatwg-fetch';
 
 fetchMock.get('/api/videos', getAll());

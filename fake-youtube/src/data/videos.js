@@ -1,7 +1,7 @@
 const allVideos = [
   {
     id: '1',
-    videoLink: 'https://youtu.be/nvNgCaqvgdY',
+    videoLink: "https://www.youtube.com/embed/nvNgCaqvgdY",
     title: 'Yeet Vines',
     author: 'Black Goku',
     date: 'Jun 18, 2018',
@@ -22,7 +22,7 @@ const allVideos = [
   },
   {
     id: '2',
-    videoLink: 'https://youtu.be/N733Ofj2cVQ',
+    videoLink: "https://www.youtube.com/embed/N733Ofj2cVQ",
     title: 'Pickle Suprise',
     author: 'AusRockALT',
     date: 'Sep 10, 2018',
@@ -47,7 +47,7 @@ const allVideos = [
   },
   {
     id: '3',
-    videoLink: 'https://youtu.be/OQSNhk5ICTI',
+    videoLink: "https://www.youtube.com/embed/OQSNhk5ICTI",
     title: 'Yosemitebear Mountain Double Rainbow 1-8-10',
     author: 'Yosemitebear62',
     date: 'Jan 8, 2010',
@@ -72,7 +72,7 @@ const allVideos = [
   },
   {
     id: '4',
-    videoLink: 'https://youtu.be/6NXnxTNIWkc',
+    videoLink: "https://www.youtube.com/embed/6NXnxTNIWkc",
     title: "4 Non Blondes - What's Up (Official Video)",
     author: '4NonBlondesVEVO',
     date: "Feb 23, 2011",
@@ -93,7 +93,7 @@ const allVideos = [
   },
   {
     id: '5',
-    videoLink: 'https://youtu.be/VF9-sEbqDvU',
+    videoLink: "https://www.youtube.com/embed/VF9-sEbqDvU",
     title: 'MARCEL THE SHELL WITH SHOES ON',
     author: 'Dean Fleischer-Camp',
     date: "Oct 16, 2010",
@@ -121,7 +121,7 @@ const allVideos = [
     videoLink: 'https://youtu.be/dQw4w9WgXcQ',
     title: 'Rick Astley - Never Gonna Give You Up (Video)',
     author: 4,
-    dateTime: ,
+    dateTime: "Oct 22, 1988",
     comments: [
       {
         user: "It’s Only Devon",
